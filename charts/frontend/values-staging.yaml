@@ -1,0 +1,33 @@
+replicaCount: 1
+
+image:
+  repository: 343980058896.dkr.ecr.ap-south-1.amazonaws.com/frontend
+  pullPolicy: IfNotPresent
+  tag: "1.0"
+
+serviceAccount:
+  create: true
+  automount: true
+  annotations: {}
+  name: ""
+
+service:
+  type: ClusterIP
+  port: 80
+
+ingress:
+  enabled: false
+
+httpRoute:
+  enabled: false
+
+autoscaling:
+  enabled: false
+
+resources: {}
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
